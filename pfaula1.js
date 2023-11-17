@@ -6,7 +6,7 @@ const roletaRussa = ["Pague 10 reais",
 "Beba agua",
 "Cochilo sem despertador",
 "Fazer live NPC",
-"🎉 Parabens vc ganhou!",]
+"🎉 Parabens vc ganhou!(nao tem premio)",]
 
 const rand = Math.floor(Math.random() * roletaRussa.length)
 
