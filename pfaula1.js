@@ -1,13 +1,31 @@
-const roletaRussa = ["Pague 10 reais",
-"Pague uma coca",
-"10 flexoes",
-"Hello World , neutro",
-"10 agachamentos",
-"Beba agua",
-"Cochilo sem despertador",
-"Fazer live NPC",
-"🎉 Parabens vc ganhou!(nao tem premio)",]
+const workingHours = ["Aberto",
+"Fechado"]
 
-const rand = Math.floor(Math.random() * roletaRussa.length)
+const prescenceSensor = ["Veiculo", "Sem veiculo"]
 
-console.log(roletaRussa[rand]);
+let openHour = false;
+let present = false;
+
+const randHour = Math.floor(Math.random() * workingHours.length)
+
+const randSensor = Math.floor(Math.random() * prescenceSensor.length)
+
+if(workingHours[randHour] === "Fechado"){
+    console.error("Fora do horario de funcionamento");
+}else{
+    openHour = true;
+    console.log("Aberto")
+}
+
+if(prescenceSensor[randSensor] === "Veiculo"){
+    console.warn("Veiculo presente");
+    present = true;
+}else{
+    console.error("Sem veiculo");
+}
+
+if(openHour && present){
+    console.log("Abrir cancela")
+}else{
+    console.error("Cancela fechada");
+}
