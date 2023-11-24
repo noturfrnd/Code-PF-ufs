@@ -40,3 +40,15 @@ function classifyTriangle(ladoA, ladoB, ladoC){
 console.log(`Tipo de triangulo: ${classifyTriangle(2,2,3)}`);
 console.log(`Tipo de triangulo: ${classifyTriangle(2,2,2)}`);
 console.log(`Tipo de triangulo: ${classifyTriangle(2,8,3)}`);
+
+// Questão 5
+function distEuclid(x1,y1,x2,y2){
+    const distancia = Math.sqrt(((x1-x2) * (x1-x2)) + ((y1-y2) * (y1-y2)));
+    return distancia;
+}
+
+console.log(`Distancia euclidiana de (x1,y1), (x2,y2): ${distEuclid(2,3,5,6)}`);
+
+
+
+
