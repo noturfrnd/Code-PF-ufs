@@ -49,6 +49,55 @@ function distEuclid(x1,y1,x2,y2){
 
 console.log(`Distancia euclidiana de (x1,y1), (x2,y2): ${distEuclid(2,3,5,6)}`);
 
+// Questao 6
+function quantosIguais(a, b, c){
+    if(a == b && a == c){
+        return 3;
+    }else if(a != b && b != c && a != c){
+        return 0;
+    }else return 2
+}
+
+console.log(`Quantos numeros sao iguais: ${quantosIguais(2,4,8)}`);
+console.log(`Quantos numeros sao iguais: ${quantosIguais(2,4,2)}`);
+console.log(`Quantos numeros sao iguais: ${quantosIguais(8,8,8)}`);
 
 
+function menorValor2(valorA, valorB){
+    if (valorA == valorB){
+        return valorA;
+    }
+    if(valorA > valorB){
+        return valorB;
+    }
+    return valorA;
+}
+// Questao 7
+function menorValor3(valorA, valorB, valorC){
+    if(valorA == valorB && valorA == valorC){
+        console.error("Todos os valores são iguais");
+        return valorA;
+    }
+    if (valorC < valorB && valorC < valorA){
+        return valorC;
+    } return menorValor2(valorA, valorB);
+}
 
+
+console.log(`Valores iguais: ${menorValor3(2,2,3)}`);
+console.log(`Valores iguais: ${menorValor3(2,2,2)}`);
+console.log(`Valores iguais: ${menorValor3(2,8,3)}`);
+console.log(`Valores iguais: ${menorValor3(8,99,3)}`);
+console.log(`Valores iguais: ${menorValor3(8,2,3)}`);
+
+// Questao 8 
+function fQuadratico(valor){
+    const quadrado = valor * valor;
+    const quartaPotencia = quadrado * quadrado;
+    console.table({"Valor ao quadrado: ": quadrado, "Valor elevado a quarta potencia: ": quartaPotencia});
+    return valor;
+}
+
+console.log(fQuadratico(2));
+console.log(fQuadratico(3));
+console.log(fQuadratico(8));
